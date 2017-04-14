@@ -37,6 +37,11 @@ slapp.message('help', ['mention', 'direct_message'], (msg) => {
   msg.say(HELP_TEXT)
 })
 
+slapp.message('tester', ['mention', 'direct_message']), (msg) => {
+  msg.say('test1')
+  msg.say('test2')
+}
+
 slapp.message('build sessions', ['mention', 'direct_message'], (msg) => {
   msg.say('Just a moment, I\'m getting the newest data just for you!')
   scrapeIt("http://www.buildsession.com", {
