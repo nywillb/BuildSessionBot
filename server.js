@@ -38,9 +38,16 @@ slapp.message('help', ['mention', 'direct_message'], (msg) => {
 })
 
 slapp.message('tester', ['mention', 'direct_message']), (msg) => {
-  msg.say('test1')
-  msg.say('test2')
-}
+    msg.say({
+    text: 'Here are this week\'s build sessions:',
+    attachments: [{
+      text: 'Slapp is a robust open source library that sits on top of the Slack APIs',
+      title: 'Slapp Library - Open Source',
+      image_url: 'https://storage.googleapis.com/beepboophq/_assets/bot-1.22f6fb.png',
+      title_link: 'https://beepboophq.com/',
+      color: '#7CD197'
+    }]
+  })
 
 slapp.message('build sessions', ['mention', 'direct_message'], (msg) => {
   msg.say('Just a moment, I\'m getting the newest data just for you!')
