@@ -37,7 +37,7 @@ slapp.message('help', ['mention', 'direct_message'], (msg) => {
   msg.say(HELP_TEXT)
 })
 
-slapp.message('tester', ['mention', 'direct_message']), (msg) => {
+slapp.message('tester', ['mention', 'direct_message'], (msg) => {
     msg.say({
     text: 'Here are this week\'s build sessions:',
     attachments: [{
@@ -51,7 +51,7 @@ slapp.message('tester', ['mention', 'direct_message']), (msg) => {
 
 slapp.message('build sessions', ['mention', 'direct_message'], (msg) => {
   msg.say('Just a moment, I\'m getting the newest data just for you!')
-  /*scrapeIt("http://www.buildsession.com", {
+  scrapeIt("http://www.buildsession.com", {
     listItem: ".h4",
     name: "sessions",
     data: {
@@ -62,7 +62,7 @@ slapp.message('build sessions', ['mention', 'direct_message'], (msg) => {
     }
   }, (err, page) => {
     console.log(err || page);
-  });*/
+  });
   msg.say({
     text: 'Here are this week\'s build sessions:',
     attachments: [{
